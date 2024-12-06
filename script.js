@@ -5,7 +5,7 @@ let popup = document.querySelector('.popup');
 
 // Functie om de popup te tonen
 let showPopup = function() {
-    popup.style.display = 'block';
+    popup.style.display = 'flex';
 };
 
 let removePopup = function() { // popup weeer weghalen
