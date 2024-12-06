@@ -1,0 +1,302 @@
+html:focus{
+    outline: 4px solid blue;
+}
+
+.wrappers {
+    /*sections die een padding mogen*/
+    padding: 20px 5vw;
+
+    @media (min-width:800px) {
+        padding: 50px 5vw;
+    }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5vw;
+    background-color: var(--darkred);
+}
+
+.navbar img {
+    height: 50px;
+}
+
+/* Hamburger menu styling */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    li {
+        position: relative;
+    }
+
+    li ul {
+        display: none;
+        position: absolute;
+        z-index: 9;
+        top: 100%;
+        left: 0;
+        width: 8rem;
+        background-color: var(--darkred);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+}
+
+.nav-links li:hover ul {
+    display: block;
+}
+
+.nav-links li ul li {
+    padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        flex-direction: column;
+        background-color: var(--darkred);
+        width: 100%;
+        height: 20vh;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+
+/* Webinar overzicht  */
+
+.latest {
+    gap: 2rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    @media (min-width:999px) {
+        flex-flow: row;
+        max-height: 55vh;
+    }
+
+    .latest-left {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: space-between;
+
+        @media (min-width:999px) {
+            width: 40%;
+        }
+
+        p {
+            margin: 2rem 0;
+            width: 300px;
+        }
+
+        .cat-button {
+            width: 9rem;
+        }
+    }
+
+    .latest-right {
+        width: 100%;
+
+        @media (min-width:999px) {
+            width: 40%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+
+            @media (min-width:999px) {
+                height:100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+}
+
+
+/*modal styling*/
+.popup{
+    position: absolute;
+    top: -10%;
+    left: 10;
+    width: 90vw;
+    height: 60vw;
+    padding: 3rem;
+    background-color:var(--white);
+    display: none;
+}
+
+
+.category-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width:900px) {
+        justify-content: start;
+    }
+}
+
+.webinar-article {
+    width: 90%;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding-bottom: 1rem;
+
+    @media (min-width:550px) {
+        width: 50%;
+    }
+
+    @media (min-width:950px) {
+        width: 22%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    *:not(img) {
+        padding: 0.3rem 0;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-size: 14px;
+            padding: 0.2rem 0.5rem;
+            align-self: center;
+            border-radius: 0.3rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            background-color: var(--darkred);
+            color: var(--white);
+        }
+
+        a {
+            font-weight: 700;
+        }
+    }
+
+}
+
+.webinar-article button {
+    background-color: var(--darkred);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.webinar-article a {
+    color: var(--darkred);
+    margin-left: 15px;
+}
+
+.image-container {
+    position: relative;
+    /* Voor positionering van het label op de afbeelding */
+    width: 100%;
+    height: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+}
+
+.label {
+    position: absolute;
+    font-weight: 700;
+    bottom: 10px;
+    font-size: 14px;
+    right: 10px;
+    background-color: var(--lightred);
+    color: var(--darkred);
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.webinar-container {
+    /*webinar page wrapper*/
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width:950px) {
+        justify-content: start;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--darkred);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        li {
+            cursor: pointer;
+        }
+    }
+}
