@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() { //hamburger menu
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenu.addEventListener('click', function() {
+        navLinks.classList.toggle('nav-active');
+        console.log(navLinks)
+    });
+});
+
+document
+
 // Selecteer de knop en de popup
 let openButton = document.querySelector('.open-popup');
 let closeButton = document.querySelector('.close-popup')
