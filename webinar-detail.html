@@ -7,19 +7,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://colindegroot.github.io/look-and-feel-styleguide/oncollaboration.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body class="wrappers">
-    <h1>webinar</h1>
+    <h1>webinar detail</h1>
     <main>
         <div class="detail-layout">
             <section class="webinar-left">
-                    <img src="img/gastrointestinal.png" alt="">
-                    <h2>IROS CME webinarFraction in head & Neck and CMS maliignanies: Radiology</h2>
-                    <div class="label-wrapper">
-                        <span class="webinar-label">research</span>
-                        <span class="webinar-label">fraction</span>
-                    </div>
+                <img src="img/gastrointestinal.png" alt="">
+                <h2>IROS CME webinarFraction in head & Neck and CMS malignanies: Radiology</h2>
+                <div class="label-wrapper">
+                    <span class="webinar-label">research</span>
+                    <span class="webinar-label">fraction</span>
+                </div>
             </section>
 
             <section class="webinar-right">
@@ -30,10 +31,19 @@
                         repudiandae id culpa in doloremque minus exercitationem dignissimos veniam non veritatis, rem,
                         quae
                         optio perspiciatis deleniti distinctio est.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem earum amet aperiam minima voluptatum adipisci suscipit est doloribus deleniti modi quaerat totam molestiae, velit, nulla voluptas quia voluptate consectetur ad.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem earum amet aperiam minima
+                        voluptatum adipisci suscipit est doloribus deleniti modi quaerat totam molestiae, velit, nulla
+                        voluptas quia voluptate consectetur ad.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, cupiditate voluptate laboriosam
+                        repudiandae id culpa in doloremque minus exercitationem dignissimos veniam non veritatis, rem,
+                        quae
+                        optio perspiciatis deleniti distinctio est.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem earum amet aperiam minima
+                        voluptatum adipisci suscipit est doloribus deleniti modi quaerat totam molestiae, velit, nulla
+                        voluptas quia voluptate consectetur ad.
                     </p>
-                    <button class="transcript-button">close transcript</button>
                 </div>
+                <button class="transcript-button">close transcript</button>
                 <div>
                     <img src="" alt="">
 
@@ -41,6 +51,30 @@
             </section>
         </div>
     </main>
+
+    <script>
+        // Selecteer de knop en het transcript-element
+        let closeTranscript = document.querySelector('.transcript-button');
+        let transcript = document.querySelector('.transcript');
+
+        // Functie om transcript te toggelen
+        let toggleTranscript = function () {
+            if (transcript.style.display === 'none') {
+                transcript.style.display = 'block'; // Maak transcript zichtbaar
+                closeTranscript.textContent = 'Verberg transcript'; // Update knoptekst
+            } else {
+                transcript.style.display = 'none'; // Verberg transcript
+                closeTranscript.textContent = 'Toon transcript'; // Update knoptekst
+            }
+        };
+
+        // Voeg een eventlistener toe aan de knop
+        closeTranscript.addEventListener('click', toggleTranscript);
+
+        // Zorg dat de starttekst correct is
+        closeTranscript.textContent = 'Verberg transcript';
+    </script>
+
 </body>
 
 </html>

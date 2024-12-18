@@ -56,17 +56,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// remove transcript
-let closeTranscript = document.querySelector('.transscript-button');
-let transcript
-
-let removeTranscript = function() {
-    popup.style.display = 'none';
-};
-
-let removePopup = function() { 
-    popup.style.display = 'none';
-};
-
-openButton.addEventListener('click', showPopup);
-closeButton.addEventListener('click', removePopup)

@@ -352,10 +352,14 @@
     width: 30%;
 }
 
-.transscript p{
+.transcript{
+    display: block;
+}
+
+.transcript p{
     margin: 1em 0; 
     padding: 0.3em 1em 0.3em 0;
-    height: 20vh;
+    height: 40vh;
     overflow: auto;
     scrollbar-color: var(--darkred) var(--lightred);
     scrollbar-width: thin;
