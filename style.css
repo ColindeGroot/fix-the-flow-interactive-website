@@ -165,10 +165,10 @@
     text-align: center;
     position: fixed;
     inset: 50%;
-    translate:-50% -50%;
+    translate: -50% -50%;
     width: 85vw;
     border-radius: 0.8em;
-    height: 80vh; 
+    height: 80vh;
     overflow-y: auto;
     padding: 2rem;
     background-color: var(--white);
@@ -176,8 +176,8 @@
 
     @media (min-width:850px) {
         overflow-y: none;
-        translate:-50% -45%;
-        max-height:  90vh;
+        translate: -50% -45%;
+        max-height: 90vh;
         width: 60vw;
         padding: 5rem;
     }
@@ -313,34 +313,50 @@
 
 
 /*webinar detail page*/
+.detailpage {
 
-.detail-layout{
+    h1,
+    h2,
+    h3 {
+        color: var(--black);
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.detail-layout {
     display: flex;
     flex-direction: column;
     gap: 2em;
     margin: auto;
-    @media (min-width:930px){
+
+    @media (min-width:930px) {
         flex-direction: row;
     }
-
-    h1, h2, h3{
-        color: var(--black);
-    }
-    h2{
-        font-size: 1.5em;
-    }
-  
 }
 
-.webinar-left{
-    width: 65%;
-    img{
+.webinar-left {
+    width: 100%;
+
+    @media (min-width:930px) {
+        width: 65%;
+    }
+
+    img {
         width: 100%;
         height: auto;
     }
+
 }
 
-.label-wrapper{
+.label-wrapper {
+    margin-bottom: 2em;
     display: flex;
     align-items: center;
     gap: 1em;
@@ -348,22 +364,79 @@
 
 
 /* right panel */
-.webinar-right{
-    width: 30%;
+.webinar-right {
+    padding: 1em;
+    border-radius: 0.8em;
+    width: 100%;
+    background-color: var(--white);
+
+    @media (min-width:930px) {
+        width: 30%;
+    }
 }
 
-.transcript{
+.transcript {
     display: block;
 }
 
-.transcript p{
-    margin: 1em 0; 
-    padding: 0.3em 1em 0.3em 0;
+.transcript p {
+    border-left: 2px solid var(--black);
+    margin: 1em 0;
+    padding: 0.3em 1em 0.3em 1em;
     height: 40vh;
     overflow: auto;
-    scrollbar-color: var(--darkred) var(--lightred);
+    scrollbar-color: var(--darkred) var(--white);
     scrollbar-width: thin;
 }
+
+.speaker, .resouces {
+    margin: 3em 0;
+}
+
+.right-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+
+    @media (min-width:450px) {
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    a {
+        color: var(--darkred);
+        cursor: pointer;
+    }
+}
+
+.resource-wrapper{
+    background-color: var(--lightred);
+    padding: 0.5em;
+    border-radius: 0.6em;
+}
+
+.resource{
+    font-size: 2em;
+    width: 100px;
+    text-align: center;
+    padding: 0.1em;
+    border-radius: 0.2em;
+    background-color: var(--darkred);
+
+    @media(min-width:450px){
+        margin: 0;
+    }
+
+}
+
 
 
 /* Footer */
