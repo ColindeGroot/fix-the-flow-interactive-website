@@ -15,6 +15,7 @@ let openButton = document.querySelector('.open-popup');
 let closeButton = document.querySelector('.close-popup')
 let popup = document.querySelector('.popup');
 
+
 // Functie om de popup te tonen
 let showPopup = function() {
     popup.style.display = 'flex';
@@ -54,3 +55,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// remove transcript
+let closeTranscript = document.querySelector('.transscript-button');
+let transcript
+
+let removeTranscript = function() {
+    popup.style.display = 'none';
+};
+
+let removePopup = function() { 
+    popup.style.display = 'none';
+};
+
+openButton.addEventListener('click', showPopup);
+closeButton.addEventListener('click', removePopup)
