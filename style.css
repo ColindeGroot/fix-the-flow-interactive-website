@@ -183,6 +183,11 @@
     }
 }
 
+.close-popup{
+    cursor:pointer;
+    text-decoration: none;
+}
+
 
 .category-wrapper {
     display: flex;
